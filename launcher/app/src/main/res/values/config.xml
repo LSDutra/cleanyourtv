@@ -4,7 +4,7 @@
   Or leave it and push a theme instead: tools/theme.sh themes/<name> puts a config.json (same keys, see
   themes/README.md) and an optional wallpaper on the TV, and the launcher overlays it at start.
   Package names: on the TV run `pm list packages` (tools/tv.py 'pm list packages').
--->
+--> 
 <resources>
 
     <!-- Tried in order when no standard settings handler is usable; each package must also be visible
