@@ -66,6 +66,8 @@ jobs:
       - name: The launcher stays small
         run: |
           ls -la launcher/app/build/outputs/apk/release/
+          size=$(stat -c %s launcher/app/build/outputs/apk/release/*.apk)
+          test "$size" -lt 524288 || { echo "APK is over 512 KB"; exit 1; }
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
